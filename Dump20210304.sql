@@ -356,33 +356,6 @@ LOCK TABLES `Versicherungsvertrag` WRITE;
 /*!40000 ALTER TABLE `Versicherungsvertrag` DISABLE KEYS */;
 INSERT INTO `Versicherungsvertrag` VALUES (1,'DG-01','1974-05-03','TK',9,1,1),(2,'DG-01','1974-05-03','TK',9,2,1),(3,'DG-01','1974-05-03','TK',9,3,1),(4,'DH-02','1990-02-01','HP',10,12,10),(5,'DO-03','1994-10-09','HP',9,14,12),(6,'DB-04','2008-01-25','HP',9,21,19),(7,'RH-01','1976-12-11','VK',10,5,3),(8,'RD-02','1988-01-29','HP',9,11,9),(9,'RM-03','1996-01-13','HP',9,15,13),(10,'RD-04','2006-11-23','HP',9,20,18),(11,'RR-05','1990-06-29','TK',9,23,21),(12,'KH-02','1986-10-26','HP',9,10,8),(13,'KG-03','1998-03-15','HP',9,16,14),(14,'KV-04','1988-03-27','HP',10,22,20),(15,'HE-01','1980-04-17','HP',10,7,5),(16,'HR-02','1984-08-23','HP',9,9,7),(17,'HG-03','2000-05-17','HP',9,17,15),(18,'HB-04','2004-09-21','HP',9,19,17),(19,'XC-01','1974-08-07','HP',10,4,2),(20,'XH-02','1982-06-20','VK',9,8,6),(21,'XW-03','1992-06-05','VK',10,13,11),(22,'XO-04','2002-07-19','VK',9,18,16),(23,'KNH-234','2007-03-16','TK',9,24,22),(24,'RVV-845','2003-08-08','HP',10,25,23),(25,'KB-01','1978-02-14','TK',10,6,4);
 /*!40000 ALTER TABLE `Versicherungsvertrag` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `Zuordnung_SF_FZ`
---
-
-DROP TABLE IF EXISTS `Zuordnung_SF_FZ`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Zuordnung_SF_FZ` (
-  `ID` int(11) NOT NULL,
-  `Schadensfall_ID` int(11) NOT NULL,
-  `Fahrzeug_ID` int(11) NOT NULL,
-  `Schadenshoehe` decimal(16,2) DEFAULT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `Zuordnung_SF_FZ`
---
-
-LOCK TABLES `Zuordnung_SF_FZ` WRITE;
-/*!40000 ALTER TABLE `Zuordnung_SF_FZ` DISABLE KEYS */;
-INSERT INTO `Zuordnung_SF_FZ` VALUES (1,1,2,1234.50),(2,2,7,852.00),(3,2,5,1214.00),(4,3,4,1438.75),(5,3,24,2276.85),(6,4,1,1234.50),(7,4,5,1983.00),(8,5,2,1251.50),(9,5,25,731.50),(10,6,3,2653.40),(11,6,7,1438.75),(12,7,6,865.00),(13,8,7,NULL);
-/*!40000 ALTER TABLE `Zuordnung_SF_FZ` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `guestbook`
@@ -402,23 +375,3 @@ CREATE TABLE `guestbook` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `guestbook`
---
-
-LOCK TABLES `guestbook` WRITE;
-/*!40000 ALTER TABLE `guestbook` DISABLE KEYS */;
-INSERT INTO `guestbook` VALUES (1,'eduard','e@e.de','http://ggg.de','sdfsdf','male');
-/*!40000 ALTER TABLE `guestbook` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2021-03-04 11:07:35
