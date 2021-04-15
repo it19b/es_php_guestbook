@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <?php
 
-if ($result) {
+if ($result === true) {
   // redirect to all posts
   header('Location: ' . "/es_php_guestbook/posts.php");
   die();
