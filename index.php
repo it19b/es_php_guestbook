@@ -17,23 +17,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 
 
-<h2>Banana</h2>
+<h2>Schreibe ins Gästebuch</h2>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Name: <input type="text" name="name">
+  <input type="text" name="name" placeholder="Dein Name">
   <br><br>
-  E-mail: <input type="email" placeholder="Email Adresse" name="email">
+  <input type="email" placeholder="Email Adresse" name="email">
   <br><br>
-  Website: <input type="url" name="website">
+  <input placeholder="Webseite" type="url" name="website">
   <br><br>
-  Comment: <textarea name="comment" maxlength="600" rows="5" cols="40"></textarea>
+  Kommentar <span style="color: red">*</span><br>
+  <textarea name="comment" maxlength="600" rows="5" cols="40" required></textarea>
   <br><br>
-  Gender:
-  <input type="radio" name="gender" value="female">Female
-  <input type="radio" name="gender" value="male">Male
-  <input type="radio" name="gender" value="other">Other
+  <input type="radio" name="gender" value="female">Female</input>
+  <input type="radio" name="gender" value="male">Male</input>
+  <input type="radio" name="gender" value="other">Other</input>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
+
+<h5><small>Felder mit einem *, sind Pflichtfelder</small></h5>
 
 <?php
 

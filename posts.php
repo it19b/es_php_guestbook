@@ -19,8 +19,10 @@ if ($result->num_rows > 0) {
     $website = $row["website"];
     $comment = $row["comment"];
 
+    $genderString = $gender ? " - $gender" : "";
+
     $html = "
-        <h3>$name ($gender)</h3>
+        <h3>$name $genderString</h3>
         <h5>Email: $email | Webseite: $website</h5>
 
         <div>$comment</div>

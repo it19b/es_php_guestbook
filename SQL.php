@@ -43,7 +43,7 @@ class SQL {
     function GetGuesbookPosts() {
        $conn = $this->GetConnection();
 
-       $query = "SELECT * FROM guestbook";
+       $query = "SELECT * FROM guestbook ORDER BY id DESC";
        return $conn->query($query);
     }
 
